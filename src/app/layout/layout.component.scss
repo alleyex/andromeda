@@ -1,0 +1,26 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar { 
+  flex: 0 0 18%;
+}
+
+.main {
+  
+
+  //test
+ 
+  height: 80rem;
+  
+  flex: 1;
+
+}
