@@ -4,15 +4,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. [Angular Taiwan](https://angular.tw/).
 
 ## Sass 
-
  
 Adding the following line to the build options for this project in your angular.json file:
-`"stylePreprocessorOptions": {          `
-`   "includePaths": [                   `
-`       "./src/styles-variables.scss"   `
-`    ]                                  `                  
-`}                                      `                                  
- 
+```json
+"stylePreprocessorOptions": {
+    "includePaths": [
+        "src/sass"
+    ]
+}
+```
+and then import scss file to component
+
+```js
+@import "main";
+```
 
 1. [can I use](https://caniuse.com).
 2. [IcoMoon](https://icomoon.io).
