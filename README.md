@@ -5,6 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Sass 
 
+Adding the following line to the build options for this project in your angular.json file:
+`"stylePreprocessorOptions": {          `
+`   "includePaths": [                   `
+`       "./src/styles-variables.scss"   `
+`    ]                                  `                  
+`}                                      `                                  
+
 1. [can I use](https://caniuse.com).
 2. [IcoMoon](https://icomoon.io).
 3. [Glyphs](https://css-tricks.com/snippets/html/glyphs).
