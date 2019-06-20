@@ -6,7 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Sass 
 
 1. [can I use](https://caniuse.com).
-2. [IcoMoon](https://icomoon.io/).
+2. [IcoMoon](https://icomoon.io).
+3. [Glyphs](https://css-tricks.com/snippets/html/glyphs).
 
 ## ngx-translate
 
