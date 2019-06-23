@@ -1,7 +1,11 @@
+@import "main";
+
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-grey-light-2);
+ 
 
   &__input {
     font-family: inherit;

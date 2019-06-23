@@ -1,3 +1,5 @@
+@import "main";
+
 .hotel-view {
   flex: 1;
   background-color: #fff;
@@ -9,13 +11,22 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
+
+  @media only screen and (max-width: $bp-medium) {    
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;        
+  }
 }
 
 .description {
   flex: 0 0 60%;
+
+  
 }
 
 .user-reviews {
   flex: 1;
 }
-

@@ -1,15 +1,28 @@
+@import "main";
 .header {
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--line);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest){
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
 .search {
   flex: 0 0 40%;
+  @media only screen and (max-width: $bp-smallest){
+    order:1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
 }
 
 .user-nav {
