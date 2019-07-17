@@ -1,27 +1,9 @@
-# Andromeda
+## 2019/07/17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+### deploy to github
 
-## Development server
+1. Run `npm install angular-cli-ghpages --save-dev` 
+2. Run `build --prod --aot --base-href "https://alleyex.github.io/andromeda/"` 
+3. Run `npx ngh --dir=dist/andromeda`
+4. website address [andromeda](https://alleyex.github.io/andromeda/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
