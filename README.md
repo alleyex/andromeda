@@ -9,6 +9,18 @@
 
 ### add app-routing.module
 
-Run `ng generate module app-routing --module app --flat`
+1. Run `ng generate module app-routing --module app --flat`
+
+### add headers component
+
+1. Run `ng generate module headers/header --module app --flat --routing`
+2. Run `ng generate component headers/header-detail --spec false`
+3. Run `ng generate component headers/header-list --spec false`
+4. Run `ng generate service headers/header --flat --skipTests=true`
+
+
+### add message.service
+
+1. Run `ng generate service message --flat --skipTests=true`
 
 
