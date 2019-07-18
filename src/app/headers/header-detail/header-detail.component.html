@@ -1,4 +1,4 @@
-<div *ngIf="item">
+<div *ngIf="item$ | async as item">
     <h2>{{item.name | uppercase}} Details</h2>
     <div><span>id: </span>{{item.id}}</div>
     <div>
@@ -6,4 +6,7 @@
         <input [(ngModel)]="item.name" placeholder="name"/>
       </label>
     </div>
+    <p>
+      <button (click)="gotoItems(item)">Back</button>
+    </p>
 </div>

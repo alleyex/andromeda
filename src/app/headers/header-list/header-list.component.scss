@@ -1,6 +1,6 @@
 /* HeroesComponent's private CSS styles */
 .selected {
-  background-color: #CFD8DC !important;
+  background-color: #CFD8DC;
   color: white;
 }
 
@@ -22,9 +22,12 @@
   border-radius: 4px;
 }
 
-.items li.selected:hover {
-  background-color: #BBD8DC !important;
+.items li.selected {
+  background-color: #CFD8DC;
   color: white;
+}
+.items li.selected:hover {
+  background-color: #BBD8DC;
 }
 
 .items li:hover {

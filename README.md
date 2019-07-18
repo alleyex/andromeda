@@ -24,3 +24,7 @@
 1. Run `ng generate service message --flat --skipTests=true`
 
 
+## 2019/07/18
+
+### ActivatedRoute service
+
