@@ -34,3 +34,8 @@
 
 ### add map component
 1. Run `ng generate module map-center/map-center --module app --flat --routing`
+2. Run `ng generate component map-center/map-center --skipTests=true` as app.component
+3. Run `ng generate component map-center/map-center-home --skipTests=true` just a host for map center
+4. Run `ng generate component map-center/map-list --skipTests=true`
+5. Run `ng generate component map-center/map-detail --skipTests=true`
+6. Run `ng generate service map-center/map-center --flat --skipTests=true`

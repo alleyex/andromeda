@@ -1,0 +1,9 @@
+<h2>My Maps</h2>
+<ul class="maps">
+  <li *ngFor="let map of maps$ | async" [class.selected]="map.id === selectedId">
+    <a [routerLink]="[map.id]">
+      <span class="badge">{{map.id}}</span> {{map.name}}
+    </a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

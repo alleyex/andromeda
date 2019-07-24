@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { CrisisListComponent } from './crisis-list/crisis-list.component';
+// import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './headers/header.module';
@@ -16,7 +16,7 @@ import { MapCenterModule } from './map-center/map-center.module';
 @NgModule({
   declarations: [
     AppComponent,
-    CrisisListComponent,
+    // CrisisListComponent,
     PageNotFoundComponent
   ],
   imports: [
