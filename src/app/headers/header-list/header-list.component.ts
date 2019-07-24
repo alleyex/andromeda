@@ -26,7 +26,6 @@ export class HeaderListComponent implements OnInit {
       switchMap(params => {
         // (+) before `params.get()` turns the string into a number
         this.selectedId = +params.get('id');
-        console.log(this.selectedId);
         return this.headerService.getItems();
       })
     );

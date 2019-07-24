@@ -19,7 +19,7 @@
 4. Run `ng generate service headers/header --flat --skipTests=true`
 
 
-### add message.service
+### message.service
 
 1. Run `ng generate service message --flat --skipTests=true`
 
@@ -28,3 +28,9 @@
 
 ### ActivatedRoute service
 
+## 2019/07/24
+
+### Animation
+
+### add map component
+1. Run `ng generate module map-center/map-center --module app --flat --routing`
