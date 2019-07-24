@@ -3,23 +3,21 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
-
-
 import { AppComponent } from './app.component';
-// import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './headers/header.module';
 import { MapCenterModule } from './map-center/map-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // CrisisListComponent,
     PageNotFoundComponent,
-    ComposeMessageComponent
+    ComposeMessageComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +25,8 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     BrowserAnimationsModule,
     HeaderModule,
     MapCenterModule,
+    AdminModule,     
+    AuthModule,
     AppRoutingModule
   ],
   providers: [],

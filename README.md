@@ -43,3 +43,22 @@
 
 ### popup component
 1. Run `ng generate component compose-message --skipTests=true`
+2. `<router-outlet name="popup"></router-outlet>`
+3. `<a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>`
+
+### admin
+
+1. Run `ng generate module admin --routing`
+2. Run `ng generate component admin/admin-dashboard --skipTests=true`
+3. Run `ng generate component admin/admin --skipTests=true`
+4. Run `ng generate component admin/manage-header --skipTests=true`
+5. Run `ng generate component admin/manage-map --skipTests=true`
+
+### guard
+
+1. Run `ng generate guard auth/auth --skipTests=true`
+2. Run `ng generate service auth/auth --skipTests=true`
+3. Run `ng generate component auth/login --skipTests=true`
+1. Run `ng generate module auth/auth --routing`
+
+### CanDeactivate
