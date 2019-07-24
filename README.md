@@ -39,3 +39,7 @@
 4. Run `ng generate component map-center/map-list --skipTests=true`
 5. Run `ng generate component map-center/map-detail --skipTests=true`
 6. Run `ng generate service map-center/map-center --flat --skipTests=true`
+
+
+### popup component
+1. Run `ng generate component compose-message --skipTests=true`

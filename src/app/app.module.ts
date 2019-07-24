@@ -11,13 +11,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './headers/header.module';
 import { MapCenterModule } from './map-center/map-center.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     // CrisisListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ComposeMessageComponent
   ],
   imports: [
     BrowserModule,
