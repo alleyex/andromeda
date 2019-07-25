@@ -65,9 +65,18 @@
 
 ## 2019/07/25
 
-### firebase cli
+###  deploy to firebase hosting
 
 1. install `npm install --save-dev firebase-tools`
 2. Run `firebase init` select `hosting: xxxx` type derctory `dist/andromeda` rewrite `y` overwrite `N`
 3. building project `ng build --prod`
-4. deploy to firebase hosting `firebase deploy`
+4. deploy `firebase deploy`
+
+
+### install firebase api
+1. Run `npm install --save firebase`
+2.  ```javascript 
+    import * as firebase from 'firebase/app';
+    constructor() {
+        firebase.initializeApp(environment.firebase);
+    }```

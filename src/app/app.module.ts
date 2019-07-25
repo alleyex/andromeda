@@ -25,7 +25,7 @@ import { AuthModule } from './auth/auth.module';
     BrowserAnimationsModule,
     HeaderModule,
     MapCenterModule,
-    AdminModule,     
+    AdminModule,
     AuthModule,
     AppRoutingModule
   ],

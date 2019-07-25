@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent  {
+export class LoginComponent {
 
   message: string;
 
@@ -20,24 +20,25 @@ export class LoginComponent  {
   }
 
   login() {
-    this.message = 'Trying to log in ...';
-
-    this.authService.login().subscribe(() => {
-      this.setMessage();
-      if (this.authService.isLoggedIn) {
-        // Get the redirect URL from our auth service
-        // If no redirect has been set, use the default
-        let redirect = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/admin';
-
-        // Redirect the user
+    this.authService.loginWithEmail('alleyex@gmail.com', 'abc123')
+      .then(state => {
+        this.authService.isLoggedIn = false;
+        const redirect = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/admin';
         this.router.navigateByUrl(redirect);
-      }
-    });
+      })
+      .catch((error) => {
+        this.message = 'error:' + error;
+      });
   }
 
   logout() {
-    this.authService.logout();
+    this.authService.signOut()
+      .then(() =>
+        this.authService.isLoggedIn = false
+      );
     this.setMessage();
   }
+
+
 
 }

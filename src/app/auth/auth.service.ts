@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { delay, tap } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -9,17 +10,29 @@ import { delay, tap } from 'rxjs/operators';
 export class AuthService {
 
   isLoggedIn = false;
-
   redirectUrl: string;
 
-  login(): Observable<boolean> {
-    return of(true).pipe(
-      delay(1000),
-      tap(val => this.isLoggedIn = true)
-    );
+  stateChange$ = new Subject<firebase.User>();
+
+  constructor() {
+    firebase.auth().onAuthStateChanged((user) => { this.stateChange$.next(user); });
   }
 
-  logout(): void {
-    this.isLoggedIn = false;
+  registerByEmail(email: string, password: string): Promise<firebase.auth.UserCredential> {
+    return firebase.auth().createUserWithEmailAndPassword(email, password);
   }
+
+  loginWithEmail(email: string, password: string): Promise<firebase.auth.UserCredential> {
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  }
+
+  isLogged(): Promise<boolean> {
+    const status = firebase.auth().currentUser ? true : false;
+    return Promise.resolve(status);
+  }
+
+  signOut(): Promise<void> {
+    return firebase.auth().signOut();
+  }
+  
 }
