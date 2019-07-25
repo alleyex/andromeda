@@ -62,3 +62,12 @@
 1. Run `ng generate module auth/auth --routing`
 
 ### CanDeactivate
+
+## 2019/07/25
+
+### firebase cli
+
+1. install `npm install --save-dev firebase-tools`
+2. Run `firebase init` select `hosting: xxxx` type derctory `dist/andromeda` rewrite `y` overwrite `N`
+3. building project `ng build --prod`
+4. deploy to firebase hosting `firebase deploy`
