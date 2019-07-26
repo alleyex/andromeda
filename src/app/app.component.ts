@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 import { slideInAnimation } from './animations';
 import { RouterOutlet } from '@angular/router';
 
-
 import * as firebase from 'firebase/app';
 import { environment } from 'src/environments/environment';
-
 
 @Component({
   selector: 'app-root',
@@ -14,14 +12,17 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss'],
   animations: [slideInAnimation]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor() {
+  constructor(private element: ElementRef) {
     firebase.initializeApp(environment.firebase);
   }
-  
+
+  ngOnInit(): void {
+  }
+
   getAnimationData(outlet: RouterOutlet) {
     // console.log(outlet);
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 }

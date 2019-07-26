@@ -21,7 +21,9 @@ export class MapCenterService {
   getMap(id: number | string) {
     return this.getMaps().pipe(
       // (+) before `id` turns the string into a number
-      map((maps: Map[]) => maps.find(map => map.id === +id))
+      map((maps: Map[]) => maps.find(item => {
+        return item.id === +id;
+      }))
     );
   }
 }

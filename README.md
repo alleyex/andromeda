@@ -80,3 +80,11 @@
     constructor() {
         firebase.initializeApp(environment.firebase);
     }```
+
+
+## 2019/07/26 
+
+### map
+
+1.  `npm install --save @types/googlemaps`
+2.  Run `ng generate service google-map/map-loader --skipTests=true`
