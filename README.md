@@ -88,3 +88,20 @@
 
 1.  `npm install --save @types/googlemaps`
 2.  Run `ng generate service google-map/map-loader --skipTests=true`
+
+## 2019/07/27
+
+### geolocation
+
+1. `ng generate service google-map/geolocation  --skipTests=true`
+2. add `HttpClientModule`
+3. `https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAXbjP-YQ-qwhOCqYRlfc_dx6DZYHG1uv8`
+
+## 2019/07/28
+
+### table
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |

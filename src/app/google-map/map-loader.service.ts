@@ -1,25 +1,23 @@
 import { Injectable } from '@angular/core';
 
+
 const getMapsApi = (initMap: string) =>
   `https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbjP-YQ-qwhOCqYRlfc_dx6DZYHG1uv8&callback=${initMap}`;
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class MapLoaderService {
-  private map: google.maps.Map;
-  private geocoder: google.maps.Geocoder;
-  private scriptLoadingPromise: Promise<void>;
 
   constructor() {
-
     this.loadScriptLoadingPromise();
-
     this.onReady().then(() => {
       this.geocoder = new google.maps.Geocoder();
     });
   }
+  private map: google.maps.Map;
+  private geocoder: google.maps.Geocoder;
+  private scriptLoadingPromise: Promise<void>;
 
   onReady(): Promise<void> {
     return this.scriptLoadingPromise;
@@ -42,14 +40,19 @@ export class MapLoaderService {
     window.document.body.appendChild(script);
   }
 
-
   public async initMap(mapHtmlElement: HTMLElement, options: google.maps.MapOptions): Promise<google.maps.Map> {
     await this.onReady();
-    return this.map = new google.maps.Map(mapHtmlElement, options);
+    this.map = new google.maps.Map(mapHtmlElement, options);
+    return this.map;
   }
 
+  public async currentPostion(lat: number, lng: number) {
+    await this.onReady();
+    const marker = new google.maps.Marker({
+      position: { lat, lng},
+      title: 'Hello World!'
+    });
 
-
-
-
+    marker.setMap(this.map);
+  }
 }

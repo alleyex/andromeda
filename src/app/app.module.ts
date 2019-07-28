@@ -12,6 +12,8 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+ 
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     HeaderModule,
     MapCenterModule,
