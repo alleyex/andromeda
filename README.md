@@ -101,7 +101,35 @@
 
 ### table
 
-| First Header  | Second Header |
+### Current Position
+#### Realtime Database
+
+| Name          | type          |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| uid           | string        |
+| accuracy      | number        |
+| latitude      | number        |
+| longitude     | number        |
+| timestamp     | number        |
+
+
+### Position History
+#### Cloud Firestore
+
+| Name          | type          |
+| ------------- | ------------- |
+| uid           | string        |
+| accuracy      | number        |
+| latitude      | number        |
+| longitude     | number        |
+| timestamp     | number        |
+
+### Last Position
+#### Local Storage
+| Name          | type          |
+| ------------- | ------------- |
+| uid           | string        |
+| accuracy      | number        |
+| latitude      | number        |
+| longitude     | number        |
+| timestamp     | number        |
