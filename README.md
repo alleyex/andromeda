@@ -153,3 +153,7 @@
 2. Run `ng generate component auth/sign-in --skipTests=true`
 3. Run `ng generate component auth/auth-center --skipTests=true` 
 4. Run `ng generate component auth/profile --skipTests=true`
+
+
+###  animatable properties
+ [animatable properties](https://www.quackit.com/css/css3/animations/animatable_properties/)
