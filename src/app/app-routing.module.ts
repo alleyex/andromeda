@@ -6,7 +6,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 
 const appRoutes: Routes = [
   { path: 'compose', component: ComposeMessageComponent, outlet: 'popup' },
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
+  { path: '', redirectTo: '/google-map', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

@@ -99,22 +99,9 @@
 
 ## 2019/07/28
 
-### table
 
-### Current Position
-#### Realtime Database
-
-| Name          | type          |
-| ------------- | ------------- |
-| uid           | string        |
-| accuracy      | number        |
-| latitude      | number        |
-| longitude     | number        |
-| timestamp     | number        |
-
-
-### Position History
-#### Cloud Firestore
+## Realtime Database
+#### CurrentPosition
 
 | Name          | type          |
 | ------------- | ------------- |
@@ -124,8 +111,10 @@
 | longitude     | number        |
 | timestamp     | number        |
 
-### Last Position
-#### Local Storage
+
+## Cloud Firestore
+### PositionHistory
+
 | Name          | type          |
 | ------------- | ------------- |
 | uid           | string        |
@@ -133,3 +122,34 @@
 | latitude      | number        |
 | longitude     | number        |
 | timestamp     | number        |
+
+## Local Storage
+### LastPosition
+| Name          | type          |
+| ------------- | ------------- |
+| uid           | string        |
+| accuracy      | number        |
+| latitude      | number        |
+| longitude     | number        |
+| timestamp     | number        |
+
+## 2019/07/29
+### firebase
+
+1. Run `ng generate service firebase/cloud-firestore --skipTests=true`
+1. Run `ng generate service firebase/authentication --skipTests=true`
+
+## 2019/07/30
+### todo
+
+1. Run `ng generate module google-map/google-map --module app --flat --routing`
+1. Run `ng generate component google-map/google-map --skipTests=true`
+
+
+## 2019/07/31
+### sign up & sign in
+
+1. Run `ng generate component auth/sign-up --skipTests=true`
+2. Run `ng generate component auth/sign-in --skipTests=true`
+3. Run `ng generate component auth/auth-center --skipTests=true` 
+4. Run `ng generate component auth/profile --skipTests=true`

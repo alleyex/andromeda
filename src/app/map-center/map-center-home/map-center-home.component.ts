@@ -1,6 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { MapLoaderService } from '../../google-map/map-loader.service';
-import { GeolocationService } from 'src/app/google-map/geolocation.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-map-center-home',
@@ -9,25 +7,8 @@ import { GeolocationService } from 'src/app/google-map/geolocation.service';
 })
 export class MapCenterHomeComponent implements OnInit {
 
-  constructor(private service: MapLoaderService, private posService: GeolocationService) { }
-  @ViewChild('map', { static: true }) mapRef: ElementRef;
+  constructor() { }
 
-
-  geolocationPosition: any;
-
-  ngOnInit() {
-    this.service.initMap(this.mapRef.nativeElement, {
-      center: { lat: 10.7353791, lng: 106.68809549999999 },
-      scrollwheel: true,
-      zoom: 16
-    });
-
-    this.posService.getCurrentLocation();
-  }
-
-  getPos() {
-    console.log(this.posService.coords);
-  }
-
+  ngOnInit() { }
 
 }

@@ -1,8 +1,11 @@
-<h1>Angular Router dd</h1>
+<h4>Welcome {{ displayName}}</h4>
 <nav>
   <a routerLink="/map-center" routerLinkActive="active">Map Center</a>
+  <a routerLink="/google-map" routerLinkActive="active">Google Map</a>
   <a routerLink="/items" routerLinkActive="active">Items</a>
   <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  <a routerLink="/auth-center" routerLinkActive="active">Auth Center</a>
+
   <a routerLink="/login" routerLinkActive="active">login</a>
   <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
 </nav>
@@ -12,4 +15,3 @@
 </div>
 
 <router-outlet name="popup"></router-outlet>
- 

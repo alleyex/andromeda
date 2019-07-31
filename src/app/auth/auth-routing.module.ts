@@ -1,10 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { AuthCenterComponent } from './auth-center/auth-center.component';
 
 const authRoutes: Routes = [
-  { path: 'login', component: LoginComponent }
+  {
+    path: 'auth-center',
+    component: AuthCenterComponent,
+    children: [
+      {
+        path: 'sign-up',
+        component: SignUpComponent,
+        data: { animation: 'sign-up' }
+
+      },
+      {
+        path: 'sign-in',
+        component: SignInComponent,
+        data: { animation: 'sign-in' }
+      }
+    ]
+  }
 ];
 
 @NgModule({

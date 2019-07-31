@@ -1,21 +1,22 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Injectable, OnDestroy } from '@angular/core';
 
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
+import { Observable, of, pipe } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthenticationService {
 
   isLoggedIn = false;
   redirectUrl: string;
 
-  stateChange$ = new Subject<firebase.User>();
-
   constructor() {
-    firebase.auth().onAuthStateChanged((user) => { this.stateChange$.next(user); });
+    // firebase.auth().onAuthStateChanged(user => {
+    //   console.log('on auth status changed...')
+    //   this.isLoggedIn = user ? true : false;
+    // });
   }
 
   registerByEmail(email: string, password: string): Promise<firebase.auth.UserCredential> {
@@ -34,5 +35,20 @@ export class AuthService {
   signOut(): Promise<void> {
     return firebase.auth().signOut();
   }
-  
+
+  getUser(): firebase.User {
+    return firebase.auth().currentUser;
+  }
+
+  getCurrentUser() {
+    return new Promise<firebase.User>((resolve, reject) => {
+      firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+          resolve(user);
+        } else {
+          reject('No user logged in');
+        }
+      });
+    });
+  }
 }

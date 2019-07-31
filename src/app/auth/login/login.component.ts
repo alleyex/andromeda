@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/firebase/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ export class LoginComponent {
 
   message: string;
 
-  constructor(public authService: AuthService, public router: Router) {
+  constructor(public authService: AuthenticationService, public router: Router) {
     this.setMessage();
   }
 
@@ -23,7 +23,7 @@ export class LoginComponent {
     this.authService.loginWithEmail('alleyex@gmail.com', 'abc123')
       .then(state => {
         this.authService.isLoggedIn = false;
-        const redirect = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/admin';
+        const redirect = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/google-map';
         this.router.navigateByUrl(redirect);
       })
       .catch((error) => {

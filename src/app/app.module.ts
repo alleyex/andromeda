@@ -13,6 +13,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleMapModule } from './google-map/google-map.module';
  
 
 @NgModule({
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     MapCenterModule,
     AdminModule,
     AuthModule,
+    GoogleMapModule,
     AppRoutingModule
   ],
   providers: [],
