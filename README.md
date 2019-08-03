@@ -157,3 +157,12 @@
 
 ###  animatable properties
  [animatable properties](https://www.quackit.com/css/css3/animations/animatable_properties/)
+
+
+ ## 2019/08/02
+ ### natours
+
+ 1. `ng generate module natours/natours --module app --flat --routing`
+ 
+
+ 

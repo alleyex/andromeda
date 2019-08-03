@@ -14,6 +14,7 @@ import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleMapModule } from './google-map/google-map.module';
+import { NatoursModule } from './natours/natours.module';
  
 
 @NgModule({
@@ -32,6 +33,7 @@ import { GoogleMapModule } from './google-map/google-map.module';
     AdminModule,
     AuthModule,
     GoogleMapModule,
+    NatoursModule,
     AppRoutingModule
   ],
   providers: [],
