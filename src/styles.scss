@@ -1,9 +1,12 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+li{
+  list-style-type: none;
+  max-width: 200px;
+  padding: 8px;
+  margin: 8px;
+  background: #eee;
+  border: 1px dotted #ddd;
 }
+
 
 h1 {
   color: #369;

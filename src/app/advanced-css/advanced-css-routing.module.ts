@@ -4,12 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { NatoursComponent } from './natours/natours.component';
 
 
-const natoursRoutes: Routes = [
+const advancedCssRoutes: Routes = [
   { path: 'natours', component: NatoursComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(natoursRoutes)],
+  imports: [RouterModule.forChild(advancedCssRoutes)],
   exports: [RouterModule]
 })
-export class NatoursRoutingModule { }
+export class AdvancedCssRoutingModule { }

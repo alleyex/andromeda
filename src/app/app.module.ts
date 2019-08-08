@@ -14,8 +14,9 @@ import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleMapModule } from './google-map/google-map.module';
-import { NatoursModule } from './natours/natours.module';
- 
+import { AdvancedCssModule } from './advanced-css/advanced-css.module';
+import { ModernJavascriptModule } from './modern-javascript/modern-javascript.module';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NatoursModule } from './natours/natours.module';
     AdminModule,
     AuthModule,
     GoogleMapModule,
-    NatoursModule,
+    AdvancedCssModule,
+    ModernJavascriptModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NatoursRoutingModule } from './natours-routing.module';
 import { NatoursComponent } from './natours/natours.component';
+import { AdvancedCssRoutingModule } from './advanced-css-routing.module';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { NatoursComponent } from './natours/natours.component';
   ],
   imports: [
     CommonModule,
-    NatoursRoutingModule
+    AdvancedCssRoutingModule
   ]
 })
-export class NatoursModule { }
+export class AdvancedCssModule { }
