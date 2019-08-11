@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DomComponent } from './dom/dom.component';
 import { FormComponent } from './form/form.component';
+import { ArrayComponent } from './array/array.component';
 
 
 const modernJavascriptRoutes: Routes = [
   {path:'dom', component: DomComponent},
-  {path:'form', component: FormComponent}
+  {path:'form', component: FormComponent},
+  {path:'array', component: ArrayComponent}
 ];
 
 @NgModule({

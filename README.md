@@ -174,4 +174,10 @@
  ### modern javascript
   1. `ng generate module modern-javascript/modern-javascript --module app --flat --routing`
   2. `ng generate component modern-javascript/dom --skipTests=true`
-  2. `ng generate component modern-javascript/form --skipTests=true`
+  3. `ng generate component modern-javascript/form --skipTests=true`
+  4. `ng generate component modern-javascript/array --skipTests=true`
+
+ ## 2019/08/08
+ ### regular
+
+ [https://regex101.com/](https://regex101.com/)
