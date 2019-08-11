@@ -10,6 +10,57 @@ export class ArrayComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    const addForm = document.querySelector('.add') as HTMLFormElement;
+    const list = document.querySelector('.todos') as HTMLElement;
+    const search = document.querySelector('.search input') as HTMLInputElement;
+
+    const generateTemplate = (todo: string) => {
+      const html = `
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${todo}</span>
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+      `;
+
+      if (todo.length) {
+        list.innerHTML += html;
+        addForm.reset();
+      }
+    }
+
+    addForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const todo = addForm.add.value.trim();
+      generateTemplate(todo);
+    });
+
+
+    // delete todo
+    list.addEventListener('click', e =>{
+      const target = e.target as HTMLElement;
+      if(target.classList.contains('delete')){
+        target.parentElement.remove();
+      };
+    });
+
+    const fileterTodos = (term:string) => {
+      Array.from(list.children)
+      .filter( todo =>!todo.textContent.toLowerCase().includes(term))
+      .forEach(todo => todo.classList.add('filtered'));
+
+      Array.from(list.children)
+      .filter( todo =>todo.textContent.toLocaleLowerCase().includes(term))
+      .forEach(todo => todo.classList.remove('filtered')); 
+    }
+
+    // keyup event
+    search.addEventListener('keyup', e =>{
+      const term = search.value.trim().toLowerCase();
+      fileterTodos(term);
+    })
+
+
     /*
     const scores = [10, 30, 15, 25, 50, 40, 5];
     const filterScores = scores.filter((score) => {
@@ -166,7 +217,7 @@ export class ArrayComponent implements OnInit {
     console.log(promos);    
     */
 
-    
+
 
 
 

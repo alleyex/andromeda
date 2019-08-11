@@ -27,7 +27,7 @@
               "src/app/natours/img",
               "src/assets"
             ],
-            "styles": [
+            "styles": [           
               "src/styles.scss"
             ],
             "scripts": []

@@ -1,4 +1,4 @@
-li{
+li {
   list-style-type: none;
   max-width: 200px;
   padding: 8px;
@@ -25,6 +25,31 @@ body {
   margin: 2em;
   // overflow-x: hidden;
 
+}
+
+.container {
+  background: #352f5b;
+  max-width: 400px;
+}
+
+input[type=text],
+input[type=text]:focus {
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.todos li {
+  background: #423a6f;
+}
+
+.filtered {
+  display: none !important;
+}
+
+.delete {
+  cursor: pointer;
 }
 
 body,
