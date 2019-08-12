@@ -181,3 +181,9 @@
  ### regular
 
  [https://regex101.com/](https://regex101.com/)
+
+
+ ## 2019/08/12
+ ### javascript dates & times
+
+ 4. `ng generate component modern-javascript/date-time --skipTests=true`
