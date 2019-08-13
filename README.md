@@ -186,4 +186,5 @@
  ## 2019/08/12
  ### javascript dates & times
 
- 4. `ng generate component modern-javascript/date-time --skipTests=true`
+ 1. `ng generate component modern-javascript/date-time --skipTests=true`
+ 2. `ng generate component modern-javascript/async-javascript --skipTests=true`

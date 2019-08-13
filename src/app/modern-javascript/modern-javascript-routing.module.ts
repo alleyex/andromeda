@@ -4,9 +4,11 @@ import { DomComponent } from './dom/dom.component';
 import { FormComponent } from './form/form.component';
 import { ArrayComponent } from './array/array.component';
 import { DateTimeComponent } from './date-time/date-time.component';
+import { AsyncJavascriptComponent } from './async-javascript/async-javascript.component';
 
 
 const modernJavascriptRoutes: Routes = [
+  { path: 'async', component: AsyncJavascriptComponent },
   { path: 'date-time', component: DateTimeComponent },
   { path: 'dom', component: DomComponent },
   { path: 'form', component: FormComponent },
